@@ -1,0 +1,11 @@
+node_modules/
+android/build/
+ios/build/
+.idea/
+*.log
+*.tmpnode_modules/
+android/build/
+ios/build/
+.idea/
+*.log
+*.tmp

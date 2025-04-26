@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblia App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon/biblia-icon.png" type="image/png">
+</head>
+<body>
+
+    <header class="encabezado">
+        
+        <nav>
+            <button onclick="mostrarSeccion('inicio')">🏠 Inicio</button>
+            <button onclick="mostrarSeccion('biblia')">📖 Biblia</button>
+            <button onclick="mostrarSeccion('plan-lectura')">🗓 Plan</button>
+            <button onclick="mostrarSeccion('concordancia')">🔍 Concordancia</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INICIO -->
+        <section id="inicio" class="seccion">
+            <div class="inicio-contenido">
+            <div class="inicio-texto">
+            <h2>🙏 Bienvenido a Biblia App</h2>
+            <p>Explora la Palabra de Dios con facilidad, profundidad y belleza.</p>
+            </div>
+            <div class="inicio-imagen">
+            <img src="img/Ilustracion inicio.png" alt="Ilustración" class="img-inicio">
+            </div>
+            </div>
+        </section>
+
+        <!-- BIBLIA -->
+        <section id="biblia" class="seccion oculto">
+            <h2>📜 Texto de la Biblia</h2>
+            <p id="texto-biblia" class="texto-biblia">Cargando...</p>
+            <div class="controles-biblia">
+                <button class="btn-escuchar" onclick="leerTexto()">🔊 Escuchar</button>
+                <div class="navegacion-versiculos">
+                    <button onclick="versiculoAnterior()">◀ Anterior</button>
+                    <button onclick="siguienteVersiculo()">Siguiente ▶</button>
+                </div>
+            </div>
+            <div class="buscador">
+                <input type="text" id="buscar-libro" placeholder="Buscar libro..." oninput="buscarLibros()">
+                <button onclick="buscarLibros()">🔍</button>
+            </div>
+            <div id="lista-libros"></div>
+            <div id="lista-capitulos"></div>
+            <div id="lista-versiculos"></div>
+        </section>
+
+        <!-- PLAN DE LECTURA -->
+        <section id="plan-lectura" class="seccion oculto">
+            <h2>📅 Plan de Lectura</h2>
+            <p id="fecha-plan" class="fecha-plan">Día 1:</p>
+            <ul id="pasajes-plan" class="lista-pasajes"></ul>
+            <button class="btn-escuchar" onclick="leerPlanLectura()">🔊 Escuchar</button>
+            <div class="navegacion-plan">
+                <button onclick="diaAnterior()">◀ Día Anterior</button>
+                <button onclick="diaSiguiente()">Día Siguiente ▶</button>
+            </div>
+            <button onclick="marcarCompletado()">✔ Marcar como Completado</button>
+            <p id="estado-completado" class="estado-completado"></p>
+
+            <h3>📋 Días Completados</h3>
+            <ul id="lista-completados"></ul>
+            <button onclick="limpiarCompletados()">🗑 Limpiar Completados</button>
+        </section>
+
+        <!-- CONCORDANCIA -->
+        <section id="concordancia" class="seccion oculto">
+            <h2>🔎 Concordancia Bíblica</h2>
+            <input type="text" id="buscarPalabra" placeholder="Escribe una palabra clave...">
+            <button onclick="buscarEnConcordancia()">Buscar</button>
+            <div id="resultadoConcordancia" class="resultado-concordancia"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "bibliaapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor-community/text-to-speech": "^6.0.0",
+    "@capacitor/android": "^7.1.0",
+    "@capacitor/cli": "^7.2.0",
+    "@capacitor/core": "^7.2.0",
+    "@capacitor/ios": "^7.1.0",
+    "@capacitor/local-notifications": "^7.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justo0726/BibliaApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Justo0726/BibliaApp/issues"
+  },
+  "homepage": "https://github.com/Justo0726/BibliaApp#readme",
+  "description": ""
+}
